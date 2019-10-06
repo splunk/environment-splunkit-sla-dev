@@ -1,4 +1,5 @@
 nginx-ingress:
+  ingressClass: "nginx-external"
   controller:
     replicaCount: 3
     extraArgs:
