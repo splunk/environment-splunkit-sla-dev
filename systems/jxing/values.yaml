@@ -1,5 +1,5 @@
 nginx-ingress:
-  ingressClass: "nginx-external"
+  ingressClass: "nginx"
   controller:
     replicaCount: 3
     extraArgs:
