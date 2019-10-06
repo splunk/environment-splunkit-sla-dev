@@ -1,6 +1,9 @@
 nginx-ingress:
-  ingressClass: "nginx-external"
+  ingressClass: "nginx"
   controller:
+    scope: 
+      enabled: true
+      namespace: jx
     replicaCount: 3
     extraArgs:
       publish-service: kube-system/jxing-nginx-ingress-controller

@@ -13,31 +13,31 @@ cluster:
   registry: 080315578257.dkr.ecr.us-west-2.amazonaws.com
 environments:
 - ingress:
-    domain: ""
-    externalDNS: false
+    domain: sla-dev.splunkit.io
+    externalDNS: true
     namespaceSubDomain: ""
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: itops-sub@splunk.com
+      enabled: true
+      production: true
   key: dev
 - ingress:
-    domain: ""
-    externalDNS: false
+    domain: sla-dev.splunkit.io
+    externalDNS: true
     namespaceSubDomain: ""
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: itops-sub@splunk.com
+      enabled: true
+      production: true
   key: staging
 - ingress:
-    domain: ""
-    externalDNS: false
+    domain: sla-dev.splunkit.io
+    externalDNS: true
     namespaceSubDomain: ""
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: itops-sub@splunk.com
+      enabled: true
+      production: true
   key: production
 gitops: true
 ingress:

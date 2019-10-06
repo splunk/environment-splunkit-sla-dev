@@ -11,10 +11,17 @@ chartmuseum:
     secret:
       BASIC_AUTH_USER: "{{ .Parameters.adminUser.username }}"
       BASIC_AUTH_PASS: "{{ .Parameters.adminUser.password }}"
+  service:
+    annotations:
+      fabric8.io/expose: "true"
+      fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx-external"
 
 nexus:
   defaultAdminPassword: "{{ .Parameters.adminUser.password }}"
-
+  service:
+    annotations:
+      fabric8.io/expose: "true"
+      fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx-external"
 jenkins:
   Master:
     AdminPassword: "{{ .Parameters.adminUser.password }}"
