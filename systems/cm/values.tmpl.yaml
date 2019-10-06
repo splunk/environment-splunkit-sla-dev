@@ -1,5 +1,7 @@
 cert-manager:
   enabled: {{ .Requirements.ingress.tls.enabled }}
+  podAnnotations: 
+    "iam.amazonaws.com/role" : "kiam-full-access"
   rbac:
     create: true
   webhook:

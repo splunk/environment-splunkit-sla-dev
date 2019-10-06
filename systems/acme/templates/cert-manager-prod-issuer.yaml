@@ -18,12 +18,14 @@ spec:
         - "{{ .Values.cluster.domain }}"
       # ACME DNS-01 provider configurations
       dns01:
-        clouddns:
-          # The project in which to update the DNS zone
-          project: "{{ .Values.cluster.projectID }}"
-          # A secretKeyRef to a google cloud json service account
-          serviceAccountSecretRef:
-            name: external-dns-gcp-sa
-            key: credentials.json
+        route53:
+          region: "us-west-2"
+        # clouddns:
+        #   # The project in which to update the DNS zone
+        #   project: "{{ .Values.cluster.projectID }}"
+        #   # A secretKeyRef to a google cloud json service account
+        #   serviceAccountSecretRef:
+        #     name: external-dns-gcp-sa
+        #     key: credentials.json
 {{- end }}
 {{- end }}
