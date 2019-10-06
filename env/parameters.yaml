@@ -1,0 +1,10 @@
+adminUser:
+  password: local:splunkit-sla/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: mkinsley@splunk.com
+  token: local:splunkit-sla/pipelineUser:token
+  username: mkinsley
+prow:
+  hmacToken: local:splunkit-sla/prow:hmacToken
