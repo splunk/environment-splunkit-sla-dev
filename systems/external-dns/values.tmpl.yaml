@@ -1,10 +1,12 @@
 external-dns:
+  podAnnotations: 
+    "iam.amazonaws.com/role" : "kiam-full-access"
   enabled: {{ .Requirements.ingress.externalDNS }}
   sources:
   - ingress
-  provider: google
-  google:
-    serviceAccountSecret: external-dns-gcp-sa
+  provider: aws
+  # google:
+  #   serviceAccountSecret: external-dns-gcp-sa
   rbac:
     create: true
   domainFilters:
