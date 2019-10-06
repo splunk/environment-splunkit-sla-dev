@@ -1,0 +1,14 @@
+adminUser:
+  password: local:splunkit-sla/adminUser:password
+  username: admin
+docker:
+  password: local:splunkit-sla/docker:password
+  url: https://quay.x.splunkit.io/v2/
+  username: splunk+jx
+enableDocker: true
+pipelineUser:
+  email: mkinsley@splunk.com
+  token: local:splunkit-sla/pipelineUser:token
+  username: mkinsley
+prow:
+  hmacToken: local:splunkit-sla/prow:hmacToken
